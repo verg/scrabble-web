@@ -1,5 +1,6 @@
 class Word < ActiveRecord::Base
 
+  has_many :plays
   before_save :downcase, :compute_score
   attr_accessible :word
 

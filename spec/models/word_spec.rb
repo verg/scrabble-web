@@ -2,16 +2,13 @@ require 'spec_helper'
 
 describe Word do
 
-  describe 'assocations' do
-    let(:word) { Word.create }
-    let(:play1) { word.plays.build }
-    let(:play2) { word.plays.build }
-    it 'has many plays' do
-      word.plays.should =~ [play1, play2]
-    end
+  describe 'plays assocations' do
+    let(:word) { Word.create!(word: "word") }
 
-    it "counts it's plays" do
-      word.count_plays.should == word.plays.size
+    it 'has many plays' do
+      play1 =  word.plays.create!
+      play2 = word.plays.create!
+      word.plays.should =~ [play1, play2]
     end
   end
 

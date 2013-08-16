@@ -23,7 +23,7 @@
   <h3>Previous Words</h3>
   <ul>
     <% @previous_words.each do |word| %>
-      <li id="word-<%= word.word %>"><%= word.word %>: <%= word.score %> | Plays: <%= word.count_plays %> <%= button_to("Play", play_word_path(word)) %></li>
+      <li id="word-<%= word.word %>"><%= word.word %>: <%= word.score %> | Plays: <%= word.plays.count %> | <%= render word.plays %> <%= button_to("Play", play_word_path(word)) %></li>
     <% end %>
   </ul>
 </div>

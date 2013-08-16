@@ -21,7 +21,7 @@ describe "recording the playing of a word" do
         end
       end
 
-      xit "has a time stamp" do
+      it "has a time stamp" do
         visit '/words'
         within("#word-hello") do
           click_link_or_button('Play')

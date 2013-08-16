@@ -21,10 +21,6 @@ class Word < ActiveRecord::Base
     self.score
   end
 
-  def count_plays
-    plays.count
-  end
-
   private
 
   def downcase

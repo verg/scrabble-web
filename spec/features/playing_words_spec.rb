@@ -35,7 +35,7 @@ describe "recording the playing of a word" do
         end
       end
 
-      xit "can happen multiple times" do
+      it "can happen multiple times" do
         3.times do
           visit '/words'
           within("#word-hello") do
@@ -49,7 +49,7 @@ describe "recording the playing of a word" do
         end
       end
 
-      xit "has multiple time stamps" do
+      it "has multiple time stamps" do
         visit '/words'
 
         [2, 1, 0].each do |offset|

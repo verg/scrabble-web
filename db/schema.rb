@@ -14,8 +14,10 @@
 ActiveRecord::Schema.define(:version => 20130605181234) do
 
   create_table "words", :force => true do |t|
-    t.string  "word"
-    t.integer "score"
+    t.string   "word"
+    t.integer  "score"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

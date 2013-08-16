@@ -8,6 +8,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-rspec'

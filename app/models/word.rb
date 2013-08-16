@@ -2,7 +2,7 @@ class Word < ActiveRecord::Base
 
   has_many :plays
   before_save :downcase, :compute_score
-  attr_accessible :word
+  attr_accessible :word, :plays
 
   validates :word, presence: true
   validates :word, format: { with: /\A[a-zA-Z]+\z/ }

@@ -1,6 +1,15 @@
 require 'spec_helper'
 
 describe Word do
+
+  describe 'assocations' do
+    let(:word) { Word.create }
+    let(:play) { word.plays.build }
+    it 'has many plays' do
+      word.plays.should == [play]
+    end
+  end
+
   describe 'validations' do
     it "is valid with a word" do
       expect(Word.new(:word => "hi")).to be_valid

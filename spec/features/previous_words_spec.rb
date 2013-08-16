@@ -13,7 +13,7 @@ describe "previous words" do
         end
       end
 
-      xit "displays the last three words along with their scores" do
+      it "displays the last three words along with their scores" do
         within("#previous_words") do
           sample_words.each do |word, score|
             within("#word-#{word.downcase}") do

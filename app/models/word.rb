@@ -13,11 +13,11 @@ class Word < ActiveRecord::Base
   end
 
   def compute_score
-    score = 0
+    self.score = 0
     word.each_char do |letter|
-      score += letter_scores.fetch(letter.upcase)
+      self.score += letter_scores.fetch(letter.upcase)
     end
-    score
+    self.score
   end
 
   private

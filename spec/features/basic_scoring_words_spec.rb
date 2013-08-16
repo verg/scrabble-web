@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "the basic scoring of a word" do
   describe "/words" do
-    xit "allows the input of a word and returns a score" do
+    it "allows the input of a word and returns a score" do
       visit '/words'
       fill_in 'word[word]', :with => "HELLO"
       click_link_or_button 'Score'
@@ -17,7 +17,7 @@ describe "the basic scoring of a word" do
       end
     end
 
-    xit "does not score a blank input" do
+    it "does not score a blank input" do
       visit '/words'
       fill_in 'word[word]', :with => ""
       click_link_or_button 'Score'
@@ -27,7 +27,7 @@ describe "the basic scoring of a word" do
       end
     end
 
-    xit "rejects words with non-letter characters" do
+    it "rejects words with non-letter characters" do
       ['exclaim!', '37numbers'].each do |word|
         visit '/words'
         fill_in 'word[word]', :with => word

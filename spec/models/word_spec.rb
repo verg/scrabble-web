@@ -4,9 +4,10 @@ describe Word do
 
   describe 'assocations' do
     let(:word) { Word.create }
-    let(:play) { word.plays.build }
+    let(:play1) { word.plays.build }
+    let(:play2) { word.plays.build }
     it 'has many plays' do
-      word.plays.should == [play]
+      word.plays.should =~ [play1, play2]
     end
   end
 

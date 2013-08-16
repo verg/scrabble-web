@@ -9,6 +9,10 @@ describe Word do
     it 'has many plays' do
       word.plays.should =~ [play1, play2]
     end
+
+    it "counts it's plays" do
+      word.count_plays.should == word.plays.size
+    end
   end
 
   describe 'validations' do

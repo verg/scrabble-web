@@ -1,5 +1,7 @@
 ScrabbleWeb::Application.routes.draw do
-  resources :words
+  resources :words do
+    post "play", on: :member
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

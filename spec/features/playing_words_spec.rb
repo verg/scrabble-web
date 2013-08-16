@@ -9,7 +9,7 @@ describe "recording the playing of a word" do
         click_link_or_button 'Score'
       end
 
-      xit "can record" do
+      it "can record" do
         visit '/words'
         within("#word-hello") do
           click_link_or_button('Play')
